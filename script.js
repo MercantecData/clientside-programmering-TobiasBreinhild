@@ -5,8 +5,13 @@ var url = "https://api.openweathermap.org/data/2.5/weather?q="+ document.getElem
 
 var promise = fetch(url)
 
-var promise2 = promise.then(data=>data.text())
+var promise2 = promise.then(data=>data.json())
 
-promise2.then(data=>document.getElementById("ye").innerHTML=data)
+promise2.then(UpdatePage)
 
+}
+function UpdatePage(data){
+
+    document.getElementById("name").innerHTML = `Vejret i ${data.name}, ${data.sys.country}`
+    document.getElementById("degrees").innerHTML = `${Math.floor(data.main.temp) - 272}°`
 }
