@@ -5,19 +5,37 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-    <div class="container">
-        
-        <br>
-        <h1 id="name"></h1>
-        <h2 id="degrees" ></h2>
 
+    <div class="textContainer">
         <form action="#" class="chooseCity">
             <label for="mintekst">Vælg by: </label>
             <input type="text" id="mintekst" name="textbox" value="Viborg">
             <input type="button" value="Submit" onclick="weatherStuff()">
         </form>
     </div>
+    <!--
+    <div class="container">
         
+        <br>
+        <h1 id="name"></h1>
+        <h2 id="degrees" ></h2>
+
+        <div class="icontainer">
+            <p id="weatherPic"></p>
+        </div>
+
+        <h2 id="weatherDesc"></h2>
+
+        <div class="windArrow">
+            <p id="arrow"></p>
+        </div>
+
+        <h2 id="windVelocity"></h2>
+
+    </div>
+    -->
+    <div id="main" class="lineDisplay">
+    </div>
     
     </body>    
 </html>
